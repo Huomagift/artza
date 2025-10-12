@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* placeholder helper */
+.placeholder {
+  @apply bg-gray-100 border border-gray-300 flex items-center justify-center text-2xl text-gray-400;
+}
