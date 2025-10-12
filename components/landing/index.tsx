@@ -1,6 +1,7 @@
 import { eventProps } from "@/interfaces";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero: React.FC<eventProps> = ({ ticketURL = "#" }) => {
     return (
@@ -8,7 +9,7 @@ const Hero: React.FC<eventProps> = ({ ticketURL = "#" }) => {
             <div className="relative min-h-[450px] w-full">
                 {/* Background image */}
                 <div aria-hidden className="absolute inset-0 bg-gray-100 flex items-center justify-center text-6xl text-gray-300 placeholder">
-                    <img src="/assets/Free_Billboard.jpg" alt="" className="object-cover w-full h-full rounded-lg" />
+                    <Image src="/assets/Free_Billboard.jpg" alt="Hero image" className="object-cover w-full h-full rounded-lg" fill/>
                 </div>
             </div>
             <div className="absolute inset-0 bg-black/60" />

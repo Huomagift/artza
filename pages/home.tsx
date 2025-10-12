@@ -1,10 +1,9 @@
 import React from "react";
-import Hero from "@/components/home";
 
 export default function Home () {
     return(
         <div>
-            <Hero />
+            <h1>Hello</h1>
         </div>
     )
 }
