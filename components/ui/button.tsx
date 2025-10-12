@@ -1,10 +1,8 @@
 "use client";
 
-import { motion, MotionProps } from "framer-motion";
-import { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ButtonProps } from "@/interfaces";
-
 
 const Button = ({
   label,

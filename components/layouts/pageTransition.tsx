@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import React, { ReactNode } from "react";
+import React from "react";
 import { pageTransitionProps } from "@/interfaces";
 
 const variants = {

@@ -4,7 +4,7 @@ import { useState } from "react";
 const Links = [
     { name: "Home", href: "/home" },
     { name: "Events", href: "/" },
-    { name: "Services", href: "/services", badge: "Coming Soon" },
+    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
 ];
@@ -23,7 +23,6 @@ export default function Navbar() {
                 {Links.map((l) => (
                     <Link key={l.name} href={l.href} className="flex items-center gap-2">
                         <span className="text-m font-medium hover:underline">{l.name}</span>
-                        {l.badge && <span className="text-xs px-2 py-0.5 border rounded-full inline-block">{l.badge}</span>}
                     </Link>
                 ))}
             </nav>
@@ -41,8 +40,7 @@ export default function Navbar() {
                         <Link key={l.name} href={l.href}>
                             <div className="flex items-center justify-between">
                                 <span>{l.name}</span>
-                                {l.badge && <span className="text-xs px-2 py-0.5 border rounded-full">{l.badge}</span>}
-                            </div>
+                             </div>
                         </Link>
                     ))}
                 </div>

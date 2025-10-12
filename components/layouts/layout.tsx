@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Footer from "./footer";
 import Navbar from "./Navbar";
 import { LayoutProps } from "@/interfaces";

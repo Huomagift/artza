@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import { ButtonHTMLAttributes } from "react";
-
+import { HTMLMotionProps } from "framer-motion";
 export interface LayoutProps {
     children: ReactNode;
 }
@@ -41,8 +40,9 @@ export interface FadeInViewProps {
   direction?: "up" | "down" | "left" | "right";
 }
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+export interface ButtonProps extends HTMLMotionProps<"button"> {
+  label?: string;
   variant?: "primary" | "outline";
   children?: ReactNode;
+  className?: string;
 }

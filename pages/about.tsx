@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
@@ -7,6 +8,8 @@ import SectionHeading from "@/components/ui/sectionHeading";
 import Container from "@/components/layouts/container";
 
 const About: NextPage = () => {
+    const router = useRouter();
+
   return (
     <>
       <Head>
@@ -111,7 +114,7 @@ const About: NextPage = () => {
             <p className="max-w-2xl mx-auto text-gray-300 mb-8">
               Discover how ARTZA is redefining creativity, one masterpiece at a time.
             </p>
-            <Button label="Explore Our Works" variant="outline" />
+            <Button label="Explore Our Works" variant="outline" onClick={() => router.push ("/services")}/>
           </FadeInView>
         </section>
       </main>

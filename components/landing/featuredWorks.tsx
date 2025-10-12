@@ -1,39 +1,75 @@
-import React from "react";
-import { Work } from "@/interfaces";
+"use client";
 
-const Sample: Work[] = [
-    { id: "w1", title: "Custom Portrait" },
-    { id: "w2", title: "Money Bouquet" },
-    { id: "w3", title: "Interior Surprise" },
-    { id: "w4", title: "Digital Print" },
-    { id: "w5", title: "Framed Series" },
-    { id: "w6", title: "Event Installation" },
-];
+import { motion } from "framer-motion";
 
-export default function FeaturedWorks() {
-    return (
-        <section aria-labelledby="featured-works" className="border-b py-12">
-            <div className="mx-auto max-w-7xl px-4">
-                <div className="flex items-center justify-between mb-8">
-                    <h3 id="featured-works" className="text-2xl font-semibold">Featured Works</h3>
-                    <p className="text-sm text-gray-500">Curated selections from past projects</p>
-                </div>
+export default function FeaturedArtworksPage() {
+  const artworks = [
+    {
+      title: "Golden Harmony",
+      desc: "A hand-painted abstract expression of balance and warmth.",
+    },
+    {
+      title: "Digital Dreamscape",
+      desc: "A modern digital blend of surreal art and imagination.",
+    },
+    {
+      title: "Framed Legacy Series",
+      desc: "Curated wall pieces preserving timeless artistry.",
+    },
+    {
+      title: "Nature in Motion",
+      desc: "Dynamic art inspired by movement in natural elements.",
+    },
+    {
+      title: "Emotive Lines",
+      desc: "Minimalist strokes capturing deep human emotions.",
+    },
+    {
+      title: "The Collector’s Touch",
+      desc: "Limited edition mixed-media pieces designed for collectors.",
+    },
+  ];
 
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {Sample.map((w) => (
-                        <article key={w.id} className="border rounded-md overflow-hidden hover:shadow-lg transition bg-amber-50">
-                            <div className="placeholder h-44 flex items-center justify-center text-3xl">#</div>
-                            <div className="p-4">
-                                <h4 className="font-medium">{w.title}</h4>
-                                <p className="mt-2 text-sm text-gray-600">{w.subtitle ?? "Past work example"}</p>
-                                <div className="mt-3">
-                                    <button className="text-sm rounded border px-3 py-1">Request Quote</button>
-                                </div>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+  return (
+    <main className="min-h-screen px-6 pt-24 bg-black">
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Featured Artworks
+      </motion.h1>
+
+      {/* Artworks Grid */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        {artworks.map((art, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            whileHover={{ scale: 1.03 }}
+            className="rounded-xl border bg-white p-6 shadow-sm hover:shadow-md transition-all"
+          >
+            <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-2xl mb-4">
+              Artwork #{idx + 1}
             </div>
-        </section>
-    )
-};
+            <h3 className="text-xl font-semibold mb-2">{art.title}</h3>
+            <p className="text-gray-600 mb-4">{art.desc}</p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.2 }}
+              className="text-sm font-medium border border-black px-4 py-2 rounded-md hover:bg-black hover:text-white transition"
+            >
+              View Details
+            </motion.button>
+          </motion.div>
+        ))}
+      </div>
+    </main>
+  );
+}

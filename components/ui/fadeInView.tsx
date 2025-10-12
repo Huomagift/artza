@@ -1,6 +1,5 @@
 "use client";
 import { motion, Variants } from "framer-motion";
-import { ReactNode } from "react";
 import { FadeInViewProps } from "@/interfaces";
 
 const FadeInView = ({ children, delay = 0, direction = "up" }: FadeInViewProps) => {

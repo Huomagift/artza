@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { containerProps } from "@/interfaces";
 
 const Container = ({ children, className }: containerProps) => (

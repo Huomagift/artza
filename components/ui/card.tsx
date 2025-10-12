@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
 import { cardProps } from "@/interfaces";
 
 const Card = ({ children, className}: cardProps) => (
