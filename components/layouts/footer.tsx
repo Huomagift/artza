@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16 text-center sm:text-left place-items-center">
       <div className="place-items-center">
         {/* Logo and Tagline */}
-        <Image src="/assets/artza-logo-2.png" alt="Artza Logo" width={75} height={75} />
+        <Image src="/assets/artza-logo-2.png" alt="Artza Logo" width={75} height={75} className="place-items-center" />
         <h4 className="text-2xl font-bold">Artza</h4>
         <p className="mt-2 text-sm text-center"><i>Where <b className="text-amber-500">Vision</b> becomes <b className="text-amber-500">Masterpiece</b></i></p>
       </div>
