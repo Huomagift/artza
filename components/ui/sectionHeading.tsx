@@ -17,7 +17,7 @@ const SectionHeading = ({ title, subtitle, align = "center" }: sectionHeadingPro
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-gray-500 mt-2"
+        className="text-gray-400 mt-2"
       >
         {subtitle}
       </motion.p>

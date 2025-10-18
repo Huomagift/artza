@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagramSquare, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
     return (
@@ -39,6 +40,11 @@ const Footer: React.FC = () => {
           <li>
             <Link href="https://www.tiktok.com/@artza_world?_t=ZS-90V00KnlhDg&_r=1" className="flex items-center justify-center sm:justify-start gap-2 hover:underline">
               <FaTiktok /> TikTok
+            </Link>
+          </li>
+          <li>
+            <Link href="https://wa.me/2349073887686" className="flex items-center justify-center sm:justify-start gap-2 hover:underline">
+            <FaWhatsapp /> WhatsApp
             </Link>
           </li>
           <li>

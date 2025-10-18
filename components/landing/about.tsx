@@ -169,11 +169,11 @@ export default function About({ ticketURL = "#" }: eventProps) {
             <p>
               <strong>Contact:</strong>{" "}
               <Link
-                href="https://wa.me/2349064178807"
+                href="https://wa.me/2349073887686"
                 target="_blank"
                 className="text-amber-400"
               >
-                09064178807
+                09073887686 (WhatsApp)
               </Link>
             </p>
           </div>
